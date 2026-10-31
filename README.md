@@ -124,27 +124,7 @@ Key stage-2 hyperparameters: defaults (`tau=2, lam=3.0, alpha=0.5, sigreg_lambda
 Key stage-1 hyperparameters: `sigreg_lambda=0.05, beta=0.5`  
 Key stage-2 hyperparameters: `loss_tau=4, loss_lam=1.0, loss_alpha=0.0, sigreg_lambda=0.0`
 
----
 
-## Visualizations
-
-### Latent Space Diversity Panel
-
-```bash
-# All LIDC visualizations in one command:
-export LIDC_DATA_PATH=/path/to/lidc_attributes.pkl
-bash visualize/visualize_lidc_all.sh 0   # GPU=0
-
-# Or individually:
-cd code
-python ../visualize/make_diversity_panel_lidc.py \
-    --config configs/params_lidc.yaml \
-    --ckpt   ../weights/lidc/PIRA2_LIDC_0_best.pth \
-    --out_dir ../outputs/figures/
-
-# NPC
-python ../visualize/make_diversity_panel_npc.py \
-    --data_dir /path/to/MMIS2024TASK1 \
     --ckpt     ../weights/npc/stage2/PIRA_MMIS2024TASK1_best.pth \
     --out_dir  ../outputs/figures/
 ```
